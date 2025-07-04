@@ -1,0 +1,33 @@
+# Refs: https://packaging.python.org/en/latest/guides/writing-pyproject-toml/
+#       https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+#requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+# Change this to match your package name, repo name, and src folder name (they should all match)
+name = "unit_df"
+description = "I want to create a wrapper class to enable creating and working with unit-aware pandas DataFrames."
+dependencies = [
+  "pandas"
+]
+
+authors = [{name = "Matthew Chambers", email = "MatthewLChambers@gmail.com"}]
+readme = "README.md"
+requires-python = ">=3.13"
+license = {text = "CC0"}
+dynamic = ["version"]
+# version = "X.Y.Z"
+
+
+[tool.setuptools]
+packages = ["unit_df"]
+
+
+[project.urls]
+Homepage = "https://github.com/matthewlchambers/unit_df"
+
+
+[tool.setuptools_scm]
